@@ -1,0 +1,70 @@
+/* Base Styles */
+body {
+    background-image: url('download.jpg'); /* Replace 'your-image-url.jpg' with the URL or path to your image */
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: center center; /* Centers the background image */
+    background-color: #f4f4f4; /* Fallback background color */
+    color: #333; /* Dark text color */
+    font-family: Arial, sans-serif; /* Default font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+
+
+h1 {
+    margin: 2px 0 0;
+    justify-content: center;
+    display: flex;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    height: 100vh;
+
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px; /* Larger font size for labels */
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px; /* Larger font size for input fields */
+}
+
+button {
+    background-color: #FF6347; /* Tomato background color for buttons */
+    color: #FFF; /* White text color */
+    border: none;
+    padding: 12px 20px; /* Adjusted padding for better button appearance */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+    background-color: #FF7F50; /* Coral color on hover */
+}
+
+.centered-form {
+    text-align: left;
+}

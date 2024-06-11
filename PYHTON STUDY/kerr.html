@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <link rel="stylesheet" href="kerr.css">
+    <style>
+        body {
+            background-image: url('six.jpg'); /* Replace 'your-image-url.jpg' with the URL or path to your image */
+            background-size: cover; /* Ensures the background image covers the entire body */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+            background-position: center center; /* Centers the background image */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="padding: 100px;">Personal Information Form</h1>
+    <main>
+        <form action="/submit-form" method="POST" class="centered-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="blood-group">Blood Group</label>
+                <select id="blood-group" name="blood-group" required>
+                    <option value="">Select your blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+</body>
+</html>

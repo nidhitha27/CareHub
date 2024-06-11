@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARE HUB - Home</title>
+    <link rel="stylesheet" href="styxx.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Add any additional styles here */
+        /* Custom styles for the slideshow */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            margin-top: 50px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container">
+            <h1>CAREHUB</h1>
+            <ul>
+                <li><a href="file:///C:/Users/hansh/OneDrive/Desktop/PYHTON%20STUDY/exo.html#">Home</a></li>
+                <li><a href="file:///C:/Users/hansh/OneDrive/Desktop/PYHTON%20STUDY/about.html">About</a></li>
+                <li><a href="file:///C:/Users/hansh/OneDrive/Desktop/PYHTON%20STUDY/kerr.html">My DATA</a></li>
+                <li><a href="file:///C:/Users/hansh/OneDrive/Desktop/PYHTON%20STUDY/project.html">LOGIN</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to CAREHUB</h1>
+            <p>HEALTH is WEALTH and we make you the RICH</p>
+        </div>
+    </section>
+    <!-- Slide Show -->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="two.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="00.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="11.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Healthcare Company. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

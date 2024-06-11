@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Health Checkup Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #97c6f5;
+            color: #333;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        form {
+            background-color: #b2fadf;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        td button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        td button:hover {
+            background-color: #c0392b;
+        }
+
+        @media (max-width: 600px) {
+            form, table {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Health Checkup Details</h1>
+    <form id="healthForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+
+        <label for="date">Date of Checkup:</label>
+        <input type="date" id="date" required>
+
+        <label for="details">Details:</label>
+        <textarea id="details" required></textarea>
+
+        <button type="submit">Save Details</button>
+    </form>
+
+    <h2>Stored Checkup Details</h2>
+    <table id="detailsTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Date</th>
+                <th>Details</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Rows will be added here dynamically -->
+        </tbody>
+    </table>
+
+    <script>
+        document.getElementById('healthForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            saveDetails();
+        });
+
+        function saveDetails() {
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const date = document.getElementById('date').value;
+            const details = document.getElementById('details').value;
+
+            const checkupDetail = {
+                name,
+                age,
+                date,
+                details
+            };
+
+            let checkupDetails = JSON.parse(localStorage.getItem('checkupDetails')) || [];
+            checkupDetails.push(checkupDetail);
+            localStorage.setItem('checkupDetails', JSON.stringify(checkupDetails));
+            renderTable();
+            document.getElementById('healthForm').reset();
+        }
+
+        function renderTable() {
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = '';
+            const checkupDetails = JSON.parse(localStorage.getItem('checkupDetails')) || [];
+
+            checkupDetails.forEach((detail, index) => {
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                    <td>${detail.name}</td>
+                    <td>${detail.age}</td>
+                    <td>${detail.date}</td>
+                    <td>${detail.details}</td>
+                    <td><button onclick="deleteDetail(${index})">Delete</button></td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        function deleteDetail(index) {
+            let checkupDetails = JSON.parse(localStorage.getItem('checkupDetails')) || [];
+            checkupDetails.splice(index, 1);
+            localStorage.setItem('checkupDetails', JSON.stringify(checkupDetails));
+            renderTable();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTable();
+        });
+    </script>
+</body>
+</html>

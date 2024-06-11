@@ -1,0 +1,80 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(to right, #f8cdda, #1d2b64);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+h2 {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #1d2b64;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff3d30;
+    transform: translateY(-2px);
+}
+
+.section {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 300px;
+}
+
+.section p {
+    color: #333;
+    text-align: left;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .section {
+        width: 100%;
+    }
+}
+
+python -m streamlit run <filename.py>
+
+
+
+
+

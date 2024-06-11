@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Information Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url('your-image-url.jpg'); /* Replace 'your-image-url.jpg' with the URL or path to your image */
+            background-size: cover; /* Ensures the background image covers the entire body */
+            background-repeat: no-repeat; /* Prevents the background image from repeating */
+            background-position: center center; /* Centers the background image */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="padding: 50px;">Personal Information Form</h1>
+    <main>
+        <form action="/submit-form" method="POST" class="centered-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="">Select your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="blood-group">Blood Group</label>
+                <select id="blood-group" name="blood-group" required>
+                    <option value="">Select your blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+</body>
+</html>
+
+
+/* Base Styles */
+body {
+    background-image: url('download.jpg'); /* Replace 'your-image-url.jpg' with the URL or path to your image */
+    background-size: cover; /* Ensures the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+    background-position: center center; /* Centers the background image */
+    background-color: #f4f4f4; /* Fallback background color */
+    color: #333; /* Dark text color */
+    font-family: Arial, sans-serif; /* Default font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+
+
+h1 {
+    margin: 2px 0 0;
+    justify-content: center;
+    display: flex;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    height: 100vh;
+
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 18px; /* Larger font size for labels */
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px; /* Larger font size for input fields */
+}
+
+button {
+    background-color: #FF6347; /* Tomato background color for buttons */
+    color: #FFF; /* White text color */
+    border: none;
+    padding: 12px 20px; /* Adjusted padding for better button appearance */
+    border-radius: 4px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+    background-color: #FF7F50; /* Coral color on hover */
+}
+
+.centered-form {
+    text-align: left;
+}
+
+
+
+
+https://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.githttps://github.com/yourusername/carehub.git

@@ -1,0 +1,83 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Dil-LEAD.jpg'); /* Ensure this path is correct relative to your CSS file */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Set height to 100% of the viewport */
+    color: #333;
+}
+
+h1 {
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 15px; /* Increased padding */
+    width: 400px; /* Increased width */
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+input:focus {
+    border-color: #1d2b64;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 15px 30px; /* Increased padding */
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #ff3d30;
+    transform: translateY(-2px);
+}
+
+.section {
+    background: rgba(94, 93, 93, 0.8); /* Slightly darker background */
+    padding: 40px; /* Increased padding */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+    width: 450px; /* Increased width */
+}
+
+.section p {
+    color: #ffffff;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .section {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}

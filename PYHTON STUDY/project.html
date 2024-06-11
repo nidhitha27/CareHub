@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="otp-section" class="section">
+        <h1>Enter Mobile Number</h1>
+        <input type="text" id="mobile-number" placeholder="Enter your mobile number" pattern="[0-9]*" inputmode="numeric" required>
+        <span id="mobile-number-error" style="display: none; color: red;">Please enter only numeric values</span>
+        <button onclick="sendOtp()">Send OTP</button>
+        <div id="otp-verification" style="display: none;">
+            <input type="text" id="otpInput" placeholder="Enter OTP">
+            <button id="verifyOtp" onclick="verifyOtp()">Verify OTP</button>
+        </div>
+    </div>
+
+    <div id="patient-details-section" class="section" style="display: none;">
+        <h1>Patient Details</h1>
+        <form id="patient-details-form">
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <input type="text" id="disease" placeholder="Enter your disease" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div id="diabetes-info" class="section" style="display: none;">
+        <h1>Diabetes Information</h1>
+        <p>This app sends notifications to remind you to stay healthy</p>p>
+        <button onclick="window.location.href='file:///C:/Users/hansh/OneDrive/Desktop/PYHTON%20STUDY/csvtotable.html'">UPLOAD Here</button>
+    </div>
+
+    <!-- Audio elements for notifications -->
+    <audio id="otp-sound" src="otp-sound.mp3" preload="auto"></audio>
+    <audio id="diabetes-reminder-sound" src="diabetes-reminder-sound.mp3" preload="auto"></audio>
+    <audio id="general-reminder-sound" src="general-reminder-sound.mp3" preload="auto"></audio>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
